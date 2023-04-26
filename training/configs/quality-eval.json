@@ -1,0 +1,15 @@
+{
+    "model_name_or_path": "./saved/quality-rp-deberta-large-nocontext/",
+    "model_mode": "mc",
+    "use_fast_tokenizer": true,
+    "max_seq_length": 512,
+    "overwrite_cache": true,
+    "output_dir": "./quality-out/nocontext/",
+    "do_train": false,
+    "do_eval": true,
+    "do_predict": false,
+    "eval_phase": "test",
+    "task_name": "custom",
+    "report_to": [],
+    "task_base_path": "./data/quality/"
+}

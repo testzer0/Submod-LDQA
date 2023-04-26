@@ -1,0 +1,12 @@
+DeBERTA-v3-Large, after RACE pretraining
+
+Graph Cut: 55.10%
+Facility Location: 50.24%
+Log Determinant: 54.55%
+Filtration + Log Determinant: 52.29%
+Concave-Over-Modular: 55.99%
+Filtration + Concave-Over-Modular: 56.14%
+BM25: 52.91%
+TF-IDF: 55.44%
+Random: 50.38%
+No context: 44.55%

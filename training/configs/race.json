@@ -1,0 +1,23 @@
+{
+    "model_name_or_path": "microsoft/deberta-v3-large",
+    "model_mode": "mc",
+    "use_fast_tokenizer": true,
+    "max_seq_length": 512,
+    "overwrite_cache": true,
+    "output_dir": "./race-train",
+    "do_train": true,
+    "do_eval": true,
+    "do_predict": true,
+    "predict_phases": "validation",
+    "save_strategy": "steps",
+    "save_steps": 64,
+    "evaluation_strategy": "steps",
+    "eval_steps": 64,
+    "num_train_epochs": 3000,
+    "per_device_train_batch_size": 4,
+    "per_device_eval_batch_size": 4,
+    "gradient_accumulation_steps": 32,
+    "learning_rate": 2e-5,
+    "task_name": "custom",
+    "task_base_path": "./data/race/"
+}
