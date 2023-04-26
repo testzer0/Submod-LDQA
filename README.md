@@ -39,7 +39,9 @@ Each question of the QuALITY dataset is of the multiple-choice type, with exactl
 ## Background
 
 Given a ground set $V$, a submodular function $f$ maps each set $A \subseteq 2^{|V|}$ of $V$ to a real number $x$, such that for any two sets $A \subseteq B \subseteq V$ and element $x \in V$, we have
-$$ f(A \cup \{x\}) - f(A) \geq f(B \cup \{x\}) - f(B)$$
+
+$$f(A \cup \{x\}) - f(A) \geq f(B \cup \{x\}) - f(B)$$
+
 It turns out that submodular functions possess helpful properties that allow efficient algorithms for their optimization in the face of budgetary constraints. Readers are referred to sources such as the CS 769 course notes of IIT Bombay or this [tutorial](https://theory.stanford.edu/~jvondrak/data/submod-tutorial-1.pdf) for more information. It will suffice here to say that Greedy methods are provably near-optimal for maximizing monotone submodular functions.
 
 Of special interest to us is that a number of submodular (and often, monotone) objectives may be defined on any arbitrary similarity function that capture either the faithfulness of a selection to a query or the extent to which it represents the ground set of spans. We are, in particular, interested here in the objectives that are based on Submodular Mutual Information.
