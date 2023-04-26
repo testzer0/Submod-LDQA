@@ -50,7 +50,7 @@ We use the submodlib [[4]](#4) library for the implementations of the submodular
 
 We use Facebook DPR [[5]](#5) to generate embeddings for spans prior to optimization, although we also support Sentence Transformers [[6]](#6). Our spans are contiguous sets of up to five sentences. In addition, we include TF-IDF and BM25 based greedy baselines for comparison. We also support the use of other objectives with TF-IDF and BM25 based embeddings, but we do not compare to them, as we found them to anecdotally perform similar to the greedy objective. We use [sklearn](https://scikit-learn.org/stable/about.html) for the former, and the rank-bm25 [[7]](#7) Python library for the latter. Our budget is $10$ spans in all cases. We also compare to empty and randomly chosen contexts with the same budget.
 
-We noticed that the best-performing methods at the QuALITY leaderboard [[3]](#3) included a pre-training step on the RACE [[8]](#8) dataset, so we also include this step for all of our approaches. We also include a fine-tuning step on the `train` split of QuALITY for each approach on selections, based on the same approach. The hyperparameters for each can be found under the corresponding configuration file inside `training/configs/`.
+We noticed that the best-performing methods at the QuALITY leaderboard [[3]](#3) included a pre-training step on the RACE [[8]](#8) dataset, so we also include this step for all of our approaches. We also include a fine-tuning step on the `train` split of QuALITY for each approach on selections, based on the same approach. Our training code is a modified version of the LRQA [[9]](#9) code. The hyperparameters for each can be found under the corresponding configuration file inside `training/configs/`.
 
 ## Results
 
@@ -91,3 +91,5 @@ We would like to make a few remarks on the above observations. First, we notice 
 <a id="7">[7]</a> The [rank-bm25](https://pypi.org/project/rank-bm25/) Python library, last accessed April 26, 2023.
 
 <a id="8">[8]</a> [RACE: Large-scale ReAding Comprehension Dataset From Examinations](https://arxiv.org/abs/1704.04683), Lai et. al.
+
+<a id="9">[9]</a> The [LRQA](https://github.com/zphang/lrqa) repository, last accessed April 26, 2023.
