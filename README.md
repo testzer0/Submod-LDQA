@@ -1,6 +1,6 @@
-# Submodular Subset Selection for Long-Form Question Answering
+# Submodular Subset Selection for Long-Document Question Answering
 
-This repository houses the experiments [we](#team-members) conducted to evaluate the effectiveness of Submodular Subset Selection for Long-Form Question Answering, as part of the CS 769 course project at IIT Bombay (2023 offering) under the guidance of [Prof. Ganesh Ramakrishnan](https://www.cse.iitb.ac.in/~ganesh/).
+This repository houses the experiments [we](#team-members) conducted to evaluate the effectiveness of Submodular Subset Selection for Long-Document Question Answering, as part of the CS 769 course project at IIT Bombay (2023 offering) under the guidance of [Prof. Ganesh Ramakrishnan](https://www.cse.iitb.ac.in/~ganesh/).
 
 ## Team Members
 
@@ -19,7 +19,7 @@ with the exception of the `submodlib` library for the installation of which we d
 
 ## Task Description
 
-Long-Form Question Answering involves answering questions based on documents that are too long to fit into the context of standard Transformer-based models. Conventionally, special architectures have been developed to tackle this task that allow long inputs. However, an alternative approach that is also popular is to select a subset of sentences or paragraphs (called *spans* henceforth) from the source document, and pass that to a much more readily fine-tuned model (in our case, DeBERTaV3 [[1]](#1)). The filtration of spans is typically done by ranking them based on similarity to the query in terms of a metric such as TF-IDF or BM25, and then selecting the top $k$, where $k$ is a pre-determined parameter.
+Long-Document Question Answering involves answering questions based on documents that are too long to fit into the context of standard Transformer-based models. Conventionally, special architectures have been developed to tackle this task that allow long inputs. However, an alternative approach that is also popular is to select a subset of sentences or paragraphs (called *spans* henceforth) from the source document, and pass that to a much more readily fine-tuned model (in our case, DeBERTaV3 [[1]](#1)). The filtration of spans is typically done by ranking them based on similarity to the query in terms of a metric such as TF-IDF or BM25, and then selecting the top $k$, where $k$ is a pre-determined parameter.
 
 ## Dataset
 
